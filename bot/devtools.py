@@ -6,7 +6,7 @@ from .stuff import *
 async def eval(event):
     if str(event.sender_id) not in OWNER and event.sender_id !=DEV:
         return event.reply("**Sorry You're not An Authorised User!**")
-    cmd = event.text.split(" ", maxsplit=1)[1]
+    cmd = event.text.split(" ", maxsplit=5)[1]
     old_stderr = sys.stderr
     old_stdout = sys.stdout
     redirected_output = sys.stdout = io.StringIO()
